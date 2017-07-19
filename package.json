@@ -1,0 +1,9 @@
+{
+  "name": "modern-stack",
+  "version": "1.0.0",
+  "description": "A living modern bootstrapped frontend stack.",
+  "main": "index.js",
+  "repository": "git@github.com:SebastianPlace/modern-stack.git",
+  "author": "Sebastian Place <sebplace94@gmail.com>",
+  "license": "MIT"
+}
