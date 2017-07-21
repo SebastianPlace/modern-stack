@@ -7,6 +7,9 @@
   "author": "Sebastian Place <sebplace94@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node ."
+    "start": "babel-node src"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1"
   }
 }
