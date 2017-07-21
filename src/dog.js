@@ -1,5 +1,4 @@
 // @flow
-
 class Dog {
   name: string
 

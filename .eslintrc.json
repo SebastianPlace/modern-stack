@@ -3,6 +3,9 @@
     "airbnb",
     "plugin:flowtype/recommended"
   ],
+  "env": {
+    "jest": true
+  },
   "plugins": [
     "flowtype",
     "compat"
