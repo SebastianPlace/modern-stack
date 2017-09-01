@@ -1,5 +1,15 @@
 // @flow
 
+/**
+* This file serves as a top level component.
+*
+* It renders the app component within wrapper components imported
+* from several modules.
+*
+* The `provider` wrapper supplies it's child components with a reference
+* to the store.
+*/
+
 import 'babel-polyfill'
 import Immutable from 'immutable'
 import React from 'react'

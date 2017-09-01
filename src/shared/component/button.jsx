@@ -1,13 +1,24 @@
 // @flow
 
 import React from 'react'
+import injectSheet from 'react-jss'
 
-type Props = {
-  label: string,
-  handleClick: Function,
+const styles = {
+  button: {
+    borderRadius: '4px',
+    backgroundColor: 'blue',
+    padding: '6px',
+  },
 }
 
-const Button = ({ label, handleClick }: Props) =>
-  <button onClick={handleClick}>{label}</button>
+type Props = {
+  classes: Object,
+  label: string,
+  handleClick: Function
+}
 
-export default Button
+const Button = ({ classes, label, handleClick }: Props) => (
+  <button className={classes.button} onClick={handleClick}>{label}</button>
+)
+
+export default injectSheet(styles)(Button)
