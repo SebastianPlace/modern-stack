@@ -2,18 +2,20 @@
 
 import React from 'react'
 import injectSheet from 'react-jss'
-import { primary } from '../styles/colours'
+
+import { primary, darken } from '../styles/colours'
 import { borderRadius } from '../styles/variables'
 
 const styles = {
   button: {
+    backgroundColor: primary,
     border: 'none',
     borderRadius,
     color: 'white',
-    backgroundColor: primary,
+    cursor: 'pointer',
     padding: '1em',
     '&:hover': {
-      backgroundColor: 'red',
+      backgroundColor: darken(primary),
     },
   },
 

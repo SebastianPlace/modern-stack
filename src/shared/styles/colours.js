@@ -1,6 +1,10 @@
-// eslint-disable-next-line import/prefer-default-export
+// @flow
+import Color from 'color'
 
 export const darkText = '#2b2b2b'
 export const primary = '#685eb2'
 
-// export function darkener(colour) { return  }
+// Modifier Functions
+export function darken(colour: string, level: number = 0.2) {
+  return Color(colour).darken(level).string()
+}
