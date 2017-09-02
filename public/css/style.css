@@ -3,7 +3,9 @@ body {
   margin: auto;
   font-family: sans-serif;
 }
-
+* + * {
+  font-size: 16px;
+}
 h1 {
   color: limegreen;
 }
