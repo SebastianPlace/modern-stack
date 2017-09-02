@@ -9,17 +9,21 @@ import {
   NOT_FOUND_DEMO_PAGE_ROUTE,
 } from '../routes'
 
+const routeLinks = [
+  { route: HOME_PAGE_ROUTE, label: 'Home' },
+  { route: HELLO_PAGE_ROUTE, label: 'Say Hello' },
+  { route: HELLO_ASYNC_PAGE_ROUTE, label: 'Say Hello Asynchronously' },
+  { route: NOT_FOUND_DEMO_PAGE_ROUTE, label: '404 Demo' },
+]
+
 const Nav = () => (
   <nav>
     <ul>
-      {[
-        { route: HOME_PAGE_ROUTE, label: 'Home' },
-        { route: HELLO_PAGE_ROUTE, label: 'Say Hello' },
-        { route: HELLO_ASYNC_PAGE_ROUTE, label: 'Say Hello Asynchronously' },
-        { route: NOT_FOUND_DEMO_PAGE_ROUTE, label: '404 Demo' },
-      ].map(link => (
+      {routeLinks.map(link => (
         <li key={link.route}>
-          <NavLink to={link.route} activeStyle={{ color: 'limegreen' }} exact>{link.label}</NavLink>
+          <NavLink to={link.route} activeStyle={{ color: 'limegreen' }} exact>
+            {link.label}
+          </NavLink>
         </li>
       ))}
     </ul>
