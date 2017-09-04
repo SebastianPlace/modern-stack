@@ -13,3 +13,16 @@ export const helloAsyncPage = () => ({
 export const helloEndpoint = (num: number) => ({
   serverMessage: `Hello from the server! (received ${num})`,
 })
+
+export const exercises = () => ({
+  exercises: [
+    {
+      id: 1,
+      title: 'Push Up',
+    },
+    {
+      id: 2,
+      title: 'Pull Up',
+    },
+  ],
+})

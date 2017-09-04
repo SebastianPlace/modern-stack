@@ -5,6 +5,7 @@ import {
   helloPage,
   helloAsyncPage,
   helloEndpoint,
+  exercises,
 } from './controller'
 
 import {
@@ -12,6 +13,7 @@ import {
   HELLO_PAGE_ROUTE,
   HELLO_ASYNC_PAGE_ROUTE,
   helloEndpointRoute,
+  EXERCISES_PAGE_ROUTE,
 } from '../shared/routes'
 
 import renderApp from './render-app'
@@ -31,6 +33,10 @@ export default (app: Object) => {
 
   app.get(helloEndpointRoute(), (req, res) => {
     res.json(helloEndpoint(req.params.num))
+  })
+
+  app.get(EXERCISES_PAGE_ROUTE, (req, res) => {
+    res.send(renderApp(req.url, exercises()))
   })
 
   app.get('/500', () => {
