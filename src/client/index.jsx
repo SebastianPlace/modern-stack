@@ -34,7 +34,7 @@ const preloadedState = window.__PRELOADED_STATE__
 const reducers = { hello: helloReducer, exercises: exercisesReducer }
 const initialStates = {
   hello: Immutable.fromJS(preloadedState.hello),
-  exercises: Immutable.fromJS(preloadedState.exercises)
+  exercises: Immutable.fromJS(preloadedState.exercises),
 }
 const store = createStore(
   combineReducers(reducers),
