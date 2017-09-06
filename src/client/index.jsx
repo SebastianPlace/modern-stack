@@ -23,6 +23,7 @@ import setUpSocket from './socket'
 
 import App from '../shared/app'
 import helloReducer from '../shared/reducer/hello'
+import exercisesReducer from '../shared/reducer/exercises'
 import { APP_CONTAINER_SELECTOR, JSS_SSR_SELECTOR } from '../shared/config'
 import { isProd } from '../shared/util'
 
@@ -30,11 +31,15 @@ import { isProd } from '../shared/util'
 const composeEnhancers = (isProd ? null : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose
 const preloadedState = window.__PRELOADED_STATE__
 /* eslint-enable no-underscore-dangle */
-
-const store = createStore(combineReducers(
-  { hello: helloReducer }),
-{ hello: Immutable.fromJS(preloadedState.hello) },
-composeEnhancers(applyMiddleware(thunkMiddleware)))
+const reducers = { hello: helloReducer, exercises: exercisesReducer }
+const initialStates = {
+  hello: Immutable.fromJS(preloadedState.hello),
+  exercises: Immutable.fromJS(preloadedState.exercises)
+}
+const store = createStore(
+  combineReducers(reducers),
+  initialStates,
+  composeEnhancers(applyMiddleware(thunkMiddleware)))
 
 const rootEl = document.querySelector(APP_CONTAINER_SELECTOR)
 
