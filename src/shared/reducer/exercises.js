@@ -15,7 +15,7 @@ const initialState = Immutable.fromJS({
 
 type Action = {
   type: string,
-  payload: any
+  payload: any,
 }
 
 const exercisesReducer = (state: Immut = initialState, action: Action) => {
